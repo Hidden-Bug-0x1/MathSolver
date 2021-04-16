@@ -1,4 +1,5 @@
-#pragma once
+#ifndef ERROR_H
+#define ERROR_H
 
 #include <string>
 
@@ -20,3 +21,5 @@ public:
 	bool is_null();
 };
 
+
+#endif//ERROR_H

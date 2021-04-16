@@ -1,4 +1,6 @@
-#pragma once
+#ifndef POSITION_H
+#define POSITION_H
+
 #include <string>
 
 class Position
@@ -18,3 +20,5 @@ public:
 	void set(std::string, long);
 };
 
+
+#endif//POSITION_H

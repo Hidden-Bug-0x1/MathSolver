@@ -1,4 +1,5 @@
-#pragma once
+#ifndef LEXER_H
+#define LEXER_H
 
 /*
 	The first step in parsing input
@@ -35,3 +36,4 @@ public:
 	std::pair<std::vector<Token*>*, Error*> generate_tokens(); // generate the tokens from m_text
 };
 
+#endif//LEXER_H

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef TOKENIZER_H
+#define TOKENIZER_H
 
 #include <string>
 
@@ -30,3 +31,4 @@ public:
 	std::string to_string(); // for printing out to stdout
 };
 
+#endif//TOKENIZER_H

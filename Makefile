@@ -19,8 +19,8 @@ $(OBJS): $(SRCS)
 	@echo "Inside make objects"
 	$(CXX) -std=$(STD) $(CXXFLAGS) $< -o $@
 
-# $(BINS): $(OJBS)
-# 	$(CXX) -std=$(STD) $(DIR_OBJ)/%.o -o $@
+$(BINS): $(OJBS)
+	$(CXX) -std=$(STD) $(DIR_OBJ)/%.o -o $@
 
 clean:
 	$(RM) $(DIR_OBJ)/* $(DIR_BIN)/*
