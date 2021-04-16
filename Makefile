@@ -2,25 +2,13 @@ CXX=clang++
 STD=c++17
 CXXFLAGS=-I./headers
 
-DIR_HEADER=headers
-HEADERS=$(wildcard $(DIR_HEADER)/*.h)
+BINS=bins/test
+SO_FILE=objs/solver.so
 
-DIR_SRC=src 
 SRCS=$(wildcard ./src/*.cpp)
 
-DIR_OBJ=objs
-OBJS=$(patsubst $(DIR_OBJ)/%.o, $(DIR_SRC)/%.cpp, $(SRCS))
+$(SO_FILE): $(SRCS)
+	$(CXX) -std=$(STD) -L. -shared -fPIC $(CXXFLAGS) -o $@ $(SRCS)
 
-DIR_BIN=bins
-BINS=$(DIR_BIN)/test
-# $(OJBS)
-$(OBJS): $(SRCS)
-	@echo "$(wildcard ./src/*.cpp)"
-	@echo "Inside make objects"
+$(BINS): Tester.cpp
 	$(CXX) -std=$(STD) $(CXXFLAGS) $< -o $@
-
-$(BINS): $(OJBS)
-	$(CXX) -std=$(STD) $(DIR_OBJ)/%.o -o $@
-
-clean:
-	$(RM) $(DIR_OBJ)/* $(DIR_BIN)/*
