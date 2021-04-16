@@ -1,4 +1,4 @@
-#include "../headers/Position.h"
+#include "../headers/MathSolver.h"
 
 Position::Position() {
 	m_index = -1;

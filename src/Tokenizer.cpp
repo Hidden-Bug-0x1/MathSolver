@@ -1,4 +1,4 @@
-#include "../headers/Tokenizer.h"
+#include "../headers/MathSolver.h"
 
 #define str(value) #value
 std::string Token::token_string(Tokens type)

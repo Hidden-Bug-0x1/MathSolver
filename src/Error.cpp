@@ -1,4 +1,4 @@
-#include "../headers/Error.h"
+#include "../headers/MathSolver.h"
 
 Error::Error()
 {

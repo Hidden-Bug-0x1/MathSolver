@@ -1,4 +1,4 @@
-#include "../headers/Lexer.h"
+#include "../headers/MathSolver.h"
 
 #define EOI -2
 
