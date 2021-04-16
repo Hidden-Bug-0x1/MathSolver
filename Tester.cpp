@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 
-#include "MathSolver.h"
+#include "./headers/MathSolver.h"
 
 std::pair<std::vector<Token*>*, Error*> run(std::string text) {
 	Lexer* lexer = new Lexer("test.txt", text);
@@ -24,7 +24,7 @@ std::pair<std::vector<Token*>*, Error*> run(std::string text) {
 
 int main(int argc, char* argv[]) {
 	std::ifstream file;
-	file.open("test.text", 'r');
+	file.open("test.text", std::iostream::in);
 
 	std::string line = "";
 	while (line != "EOF") {

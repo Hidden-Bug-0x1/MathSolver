@@ -1,4 +1,4 @@
-#include "Position.h"
+#include "../headers/Position.h"
 
 Position::Position() {
 	m_index = -1;

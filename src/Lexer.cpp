@@ -1,4 +1,4 @@
-#include "Lexer.h"
+#include "../headers/Lexer.h"
 
 #define EOI -2
 
