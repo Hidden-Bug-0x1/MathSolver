@@ -8,7 +8,8 @@ SO_FILE=objs/solver.so
 SRCS=$(wildcard ./src/*.cpp)
 
 $(SO_FILE): $(SRCS)
-	$(CXX) -std=$(STD) -L. -shared -fPIC $(CXXFLAGS) -o $@ $(SRCS)
+	$(RM) $(SO_FILE)
+	$(CXX) -std=$(STD) -L. -shared -fPIC $(CXXFLAGS) -o $@ $^
 
-$(BINS): Tester.cpp
-	$(CXX) -std=$(STD) $(CXXFLAGS) $< -o $@
+$(BINS): $(SO_FILE)
+	$(CXX) -std=$(STD) $(CXXFLAGS) -o $(BINS) $(SO_FILE) Tester.cpp

@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <condition_variable>
 
 #include "./headers/MathSolver.h"
 
@@ -29,7 +30,9 @@ int main(int argc, char* argv[]) {
 	std::string line = "";
 	while (line != "EOF") {
 		file >> line;
+		std::cout << line << '\n';
 		run(line);
+		std::cout << std::endl;
 	}
 
 	return 0;
